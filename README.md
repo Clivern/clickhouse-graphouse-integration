@@ -602,3 +602,11 @@ At this moment, we have Graphouse + ClickHouse as a data storage layer installed
 
 but this are topics for another post.
 
+# FAQ
+
+- Graphouse Not Started:
+
+```
+https://github.com/yandex/graphouse/issues/77
+https://github.com/yandex/graphouse/pull/74/files
+```
