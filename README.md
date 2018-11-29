@@ -609,4 +609,6 @@ but this are topics for another post.
 ```
 https://github.com/yandex/graphouse/issues/77
 https://github.com/yandex/graphouse/pull/74/files
+
+https://github.com/Altinity/clickhouse-graphouse-integration/issues/14
 ```
