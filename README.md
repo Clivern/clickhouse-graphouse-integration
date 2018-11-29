@@ -1,4 +1,4 @@
-# clickhouse-graphouse-integration
+# Clickhouse Graphouse Integration
 
 # Table of Contents
 
@@ -9,11 +9,13 @@
  * [Install ClickHouse](#install-clickhouse)
  * [Configure ClickHouse](#configure-clickhouse)
    * [Create ClickHouse tables](#create-clickhouse-tables)
+ * [Replicate ClickHouse](#replicate-clickhouse)
  * [Install Graphouse](#install-graphouse)
  * [Configure Graphouse](#configure-graphouse)
  * [Intermediate results](#intermediate-results)
  * [Setup ClickHouse to report metrics into Graphouse](#setup-clickhouse-to-report-metrics-into-graphouse)
  * [Install Graphite-web](#install-graphite-web)
+ * [Cluster Flooding](#cluster-flooding)
  * [Monitoring](#monitoring)
  * [Consclusions](#conclusions)
 
@@ -302,6 +304,7 @@ Settings for thinning data are defined by the `graphite_rollup` parameter in the
 
 More details are available in  [official doc](https://clickhouse.yandex/docs/en/table_engines/graphitemergetree/#table_engines-graphitemergetree)
 
+# Replicate ClickHouse
 
 # Install Graphouse
 
@@ -586,6 +589,8 @@ sudo cp graphite.wsgi.example graphite.wsgi
 sudo bash -c 'export PYTHONPATH="/opt/graphite/lib/:/opt/graphite/webapp/"; gunicorn3 --bind=127.0.0.1:8080 graphite.wsgi:application'
 ```
 
+# Cluster Flooding
+
 # Monitoring
 
 Point your browser to the host, where Graphite-web is running:
@@ -601,14 +606,3 @@ At this moment, we have Graphouse + ClickHouse as a data storage layer installed
  * Setup different graphing tool (like, say Grafana) in case you'd prefer,
 
 but this are topics for another post.
-
-# FAQ
-
-- Graphouse Not Started:
-
-```
-https://github.com/yandex/graphouse/issues/77
-https://github.com/yandex/graphouse/pull/74/files
-
-https://github.com/Altinity/clickhouse-graphouse-integration/issues/14
-```
